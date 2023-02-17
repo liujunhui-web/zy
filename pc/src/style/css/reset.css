@@ -1,0 +1,11 @@
+
+/* purgecss start ignore */
+/* 浏览器标签初始化 -- start */
+* { box-sizing: border-box;font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue For Number', BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, SimSun PingFang SC, Microsoft YaHei, Helvetica Neue For Number, BlinkMacSystemFont, Segoe UI, Roboto, Arial, SimSun; } html { height: 100%; } body { padding: 0; margin: 0; height: 100%; background: #fff; } ul, ol, li { list-style: none; margin: 0; padding: 0; } p { padding: 0; margin: 0; word-break: break-all; } #app { font-size: 14px; height: 100%; }
+
+/* 浏览器标签初始化 -- end */
+
+/* antdv 重写 -- start */
+
+/* antdv 重写 -- end */
+/* purgecss end ignore */

@@ -1,0 +1,125 @@
+/* 固定通用样式文件，可以加快开发效率*/
+/*
+    通用类名，可拓展
+*/
+view,
+text,
+input,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*page*/
+.page-index {
+    width: 100%;
+}
+
+/*flex布局*/
+.flex {
+    display: flex !important;
+}
+.flex-column {
+   flex-direction: column !important;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.flex-between {
+    justify-content: space-between !important;
+}
+
+.flex-y-center {
+    align-items: center !important;
+}
+
+/*weight*/
+.w-100p {
+    width: 100% !important;
+}
+
+/*height*/
+.h-100vh {
+    height: 100vh !important;
+}
+.h-300 {
+    height: 300rpx !important;
+}
+.h-64 {
+    height: 64rpx !important;
+}
+
+.h-128 {
+    height: 128rpx !important;
+}
+
+/*color*/
+.c-898a8e{
+    color: #898a8e !important;
+}
+.c-3c3f50{
+    color:#3c3f50 !important;
+}
+.c-fff {
+    color: #fff !important;
+}
+.c-78bd00 {
+    color: #78bd00 !important;
+}
+/*border-radius*/
+.b-r-50p {
+    border-radius: 50%;
+}
+
+/*position*/
+.relative {
+    position: relative !important;
+}
+.absolute {
+    position: absolute !important;
+}
+/*font*/
+.fs-16 {
+    font-size: 16rpx !important;
+}
+
+.fs-36 {
+    font-size: 36rpx !important;
+}
+
+.fs-48 {
+    font-size: 48rpx !important;
+}
+
+/*padding*/
+.p-8 {
+    padding: 8rpx;
+}
+
+.p-t-32 {
+    padding-top: 32rpx;
+}
+
+.p-x-32 {
+    padding-left: 32rpx !important;
+    padding-right: 32rpx !important;
+}
+
+/*background-color*/
+.bg-272a3b {
+    background-color: #272a3b !important;
+}
+.bg-f00 {
+    background-color: #f00 !important;
+}
+.bg-000 {
+    background-color: #000 !important;
+}
+.bg-f1f1f1 {
+    background-color: #f1f1f1 !important;
+}
+.bg-fff {
+    background-color: #fff !important;
+}

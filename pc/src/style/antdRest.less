@@ -1,0 +1,120 @@
+/*
+* 全局生效样式文件
+*/
+
+// 主体内容公共外部样式
+.layouts-content-wrap {
+    // height: 77vh;
+    overflow-y: auto;
+    min-height: 280px;
+    margin: 24px;
+    padding:24px;
+    background-color: #fff !important;
+    border-radius:2px;
+  }
+  
+  // 主体内容有tabs布局
+  .layout-content-tab {
+    height: 80vh;
+    overflow-y: auto;
+    min-height: 280px;
+    .ant-tabs-nav-wrap {
+      background-color: #fff !important;
+    }
+  
+    .ant-tabs-tabpane {
+      box-sizing: border-box;
+      padding: 24px;
+      padding-bottom: 0;
+    }
+  
+    .ant-tabs-bar {
+      margin-bottom: 0 !important;
+    }
+  
+    .ant-tabs-nav {
+      margin-left: 24px !important;
+      .ant-tabs-tab {
+        padding: 8px 20px !important;
+      }
+    }
+  }
+  
+  // table + 表单 布局
+  .form-table-wrap {
+    /deep/ .ant-form-item {
+      display: flex;
+      margin-bottom: 24px;
+      .ant-form-item-control-wrapper {
+        flex: 1;
+      }
+    }
+  }
+  
+  // 清浮动
+  .clearfix {
+    *zoom: 1;
+    &:after {
+      content: ".";
+      height: 0;
+      display: block;
+      visibility: hidden;
+      clear: both;
+    }
+  }
+  
+  // 抽屉底部按钮样式
+  .drawer-footer-bock {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 16px;
+    background: #fff;
+    text-align: right;
+    border-top: 1px solid #e9e9e9;
+  }
+  
+  // sign loding 加载样式
+  .model-ant-example {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(199, 199, 199, 0.2);
+    z-index: 99999;
+    .ant-spin {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  // hr 分割线
+  .mode-border-hr {
+    border: 0;
+    height: 1px;
+    background: #E9E9E9;
+    margin: 0;
+  }
+  
+  // tabl 超出显示省略号样式
+  .table-rows-ellipsis {
+    position: relative;
+    top: 2px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 140px;
+  }
+  
+  // tabl tr,td padding 设置
+  .ant-table-tbody>tr>td, .ant-table-thead>tr>th {
+    padding: 12px;
+  }

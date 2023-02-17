@@ -1,0 +1,160 @@
+<!--首页--工作-->
+<view class="page-index h-100vh bg-f1f1f1">
+    <!--可以采用页面高度为100vh通过calc计算高度布局适配不同机型，放弃position-->
+    <view class="top">
+        <view class="h-top w-100p bg-272a3b"></view>
+        <view class="h-128 w-100p bg-272a3b flex flex-between flex-y-center p-x-32 p-t-32">
+            <text></text>
+            <text class="c-78bd00 fs-36">早上好！张三先生</text>
+            <view class="relative">
+                <icon class="iconfont .icon-tongzhi c-78bd00 fs-48"></icon>
+                <text class="c-fff b-r-50p bg-f00 fs-16 p-8 absolute notice flex flex-center">{{notice}}</text>
+            </view>
+        </view>
+    </view>
+    <view>
+        <swiper class="w-100p" indicator-dots="true" indicator-color="#fff" circular="true" indicator-active-color="#87c001">
+            <block wx:for="{{bannerList}}" wx:key="index">
+                <swiper-item>
+                    <image src="{{item.src}}" mode="widthFix" class="w-100p h-300" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!--功能区-->
+    <view class="w-100p bg-272a3b c-898a8e flex flex-between options1">
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/18.png" mode="widthFix" />
+            <text>功能1</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/19.png" mode="widthFix" />
+            <text>功能2</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/20.png" mode="widthFix" />
+            <text>功能3</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/21.png" mode="widthFix" />
+            <text>功能4</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/22.png" mode="widthFix" />
+            <text>功能5</text>
+        </view>
+    </view>
+    <!--功能区（可以放到data中循环，页面渲染前计算数量并补齐到4的倍数渲染边框）（功能数量未知，数量多也使用scroll-view支持滑动）（功能不会变动可以前端写死，经常变动可以配合后端调用接口循环）-->
+    <view class="options2 bg-fff flex">
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/23.png" mode="widthFix" />
+            <text>功能A</text>
+        </view>
+        <view class="flex flex-column flex-center" bindtap="handlepb">
+            <image src="../../../assets/images/25.png" mode="widthFix" />
+            <text>功能B</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/31.png" mode="widthFix" />
+            <text>功能C</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/26.png" mode="widthFix" />
+            <text>功能D</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/31.png" mode="widthFix" />
+            <text>功能E</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/1.png" mode="widthFix" />
+            <text>功能F</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/2.png" mode="widthFix" />
+            <text>功能G</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/3.png" mode="widthFix" />
+            <text>功能H</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/6.png" mode="widthFix" />
+            <text>功能I</text>
+        </view>
+        <view class="flex flex-column flex-center">
+            <image src="../../../assets/images/7.png" mode="widthFix" />
+            <text>功能J</text>
+        </view>
+        <view class="flex flex-column flex-center">
+
+        </view>
+        <view class="flex flex-column flex-center">
+
+        </view>
+    </view>
+    <!--底部导航栏(底部导航栏需要组件化，方面首页多个页面使用)（可以采用calc计算高度布局，放弃position）-->
+    <!-- ps用的比较少，中间图片随便切了一下，不是透明背景-->
+    <view class="tabbar flex flex-between flex-y-center bg-fff">
+        <block wx:for="{{tabBarList}}" wx:key="index">
+            <view class="flex" bindtap="handleTabBar" data-key="{{item.key}}">
+                <image src="{{activeKey==item.key?item.activeImage:item.image}}" mode="widthFix" />
+                <text class="{{activeKey==item.key?'active':''}}">{{item.text}}</text>
+            </view>
+        </block>
+
+    </view>
+    <!--弹窗（可开发为组件）-->
+    <view class="popup {{hide?'hide':'show'}}">
+        <!--可以通过控制mark类名决定弹窗是否有蒙版-->
+        <view class="mark" catchtap="hidePopup">
+            <view class="popup-card" catchtap="nothing">
+                <view class="popup-title bg-272a3b">
+                    功能B
+                </view>
+                <view class="popup-content">
+                    <view>
+                        <image src="../../../assets/images/15.png" mode="widthFix"/>
+                        <text>功能1</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/16.png" mode="widthFix"/>
+                        <text>功能2</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/14.png" mode="widthFix"/>
+                        <text>功能3</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/17.png" mode="widthFix"/>
+                        <text>功能4</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/27.png" mode="widthFix"/>
+                        <text>功能5</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/28.png" mode="widthFix"/>
+                        <text>功能6</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/29.png" mode="widthFix"/>
+                        <text>功能7</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/30.png" mode="widthFix"/>
+                        <text>功能8</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/4.png" mode="widthFix"/>
+                        <text>功能9</text>
+                    </view>
+                    <view>
+                        <image src="../../../assets/images/5.png" mode="widthFix"/>
+                        <text>功能10</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>项目名</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+  <script>
+    var globalLog = console.log;
+    var globalWarn = console.warn;
+    var globalError = console.error;
+    var IsDingBrowser = /dingtalk/.test(navigator.userAgent.toLowerCase())
+  </script>
+  <% for (let link of htmlWebpackPlugin.options.cdn.css) { %>
+  <link rel="stylesheet" href="<%= link %>"><% } %>
+  <% if (process.env.NODE_ENV === 'production') { %>
+  <% for (let src of htmlWebpackPlugin.options.cdn.js) { %><script src="<%= src %>"></script><% } %>
+  <% } %>
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+/*
+* 全局生效样式文件
+*/
+.layouts-content-wrap {
+  overflow-y: auto;
+  min-height: 280px;
+  margin: 24px;
+  padding: 24px;
+  background-color: #fff !important;
+  border-radius: 2px;
+}
+.layout-content-tab {
+  height: 80vh;
+  overflow-y: auto;
+  min-height: 280px;
+}
+.layout-content-tab .ant-tabs-nav-wrap {
+  background-color: #fff !important;
+}
+.layout-content-tab .ant-tabs-tabpane {
+  box-sizing: border-box;
+  padding: 24px;
+  padding-bottom: 0;
+}
+.layout-content-tab .ant-tabs-bar {
+  margin-bottom: 0 !important;
+}
+.layout-content-tab .ant-tabs-nav {
+  margin-left: 24px !important;
+}
+.layout-content-tab .ant-tabs-nav .ant-tabs-tab {
+  padding: 8px 20px !important;
+}
+.form-table-wrap /deep/ .ant-form-item {
+  display: flex;
+  margin-bottom: 24px;
+}
+.form-table-wrap /deep/ .ant-form-item .ant-form-item-control-wrapper {
+  flex: 1;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.drawer-footer-bock {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 16px;
+  background: #fff;
+  text-align: right;
+  border-top: 1px solid #e9e9e9;
+}
+.model-ant-example {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(199, 199, 199, 0.2);
+  z-index: 99999;
+}
+.model-ant-example .ant-spin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mode-border-hr {
+  border: 0;
+  height: 1px;
+  background: #E9E9E9;
+  margin: 0;
+}
+.table-rows-ellipsis {
+  position: relative;
+  top: 2px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 140px;
+}
+.ant-table-tbody > tr > td,
+.ant-table-thead > tr > th {
+  padding: 12px;
+}

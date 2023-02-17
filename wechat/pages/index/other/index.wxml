@@ -1,0 +1,11 @@
+<!--底部导航栏(底部导航栏需要组件化，方面首页多个页面使用)（可以采用calc计算高度布局，放弃position）-->
+<!-- ps用的比较少，中间图片随便切了一下，不是透明背景(可使用cusrom-tabbar)-->
+<view class="tabbar flex flex-between flex-y-center bg-fff">
+    <block wx:for="{{tabBarList}}" wx:key="index">
+        <view class="flex" bindtap="handleTabBar" data-key="{{item.key}}">
+            <image src="{{activeKey==item.key?item.activeImage:item.image}}" mode="widthFix" />
+            <text class="{{activeKey==item.key?'active':''}}">{{item.text}}</text>
+        </view>
+    </block>
+
+</view>
